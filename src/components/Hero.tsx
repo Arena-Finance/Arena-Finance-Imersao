@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
     return (
         <section
             ref={containerRef}
-            className="relative min-h-[100dvh] flex items-center justify-center pt-8 pb-8 sm:pt-0 sm:pb-0 overflow-hidden bg-navy-deep"
+            className="relative min-h-[100dvh] flex items-center justify-center pt-12 pb-24 md:pt-16 md:pb-32 overflow-hidden bg-navy-deep"
         >
             {/* Background Grid Pattern */}
             <div className="absolute inset-0 z-0 bg-navy-deep" />
