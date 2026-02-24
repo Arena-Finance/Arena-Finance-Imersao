@@ -22,11 +22,11 @@
 
   /* Magnetic button hover effect setup */
   .btn-gold {
-    @apply relative overflow-hidden bg-gold text-black-abs font-bold uppercase tracking-wider px-8 py-4 transition-transform duration-300 ease-magnetic shadow-[0_0_20px_rgba(212, 175, 55, 0.2)];
+    @apply relative overflow-hidden bg-gold text-black-abs font-bold uppercase tracking-wider px-8 py-4 transition-transform duration-300 ease-magnetic shadow-[0_0_20px_#d4af3733];
   }
 
   .btn-gold:hover {
-    @apply scale-[1.03] shadow-[0_0_30px_rgba(212, 175, 55, 0.4)];
+    @apply scale-[1.03] shadow-[0_0_30px_#d4af3766];
   }
 
   .btn-gold::before {
