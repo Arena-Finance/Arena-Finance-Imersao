@@ -58,13 +58,13 @@ const Problem: React.FC = () => {
                     {/* Right Column */}
                     <div className="lg:col-span-8 problem-text text-gray-300 font-montserrat flex flex-col justify-center">
                         <div className="space-y-6 md:space-y-8">
-                            <p className="text-xl md:text-2xl text-white font-playfair font-medium tracking-wide">
+                            <p className="text-2xl md:text-3xl text-white font-playfair font-medium tracking-wide">
                                 Você trabalhou décadas para construir seu império.
                             </p>
-                            <p className="leading-relaxed text-[#a0aabf]">
+                            <p className="leading-relaxed text-[#a0aabf] text-xl md:text-2xl">
                                 Mas, ao manter todo o seu capital sob uma única jurisdição, você expõe o trabalho de uma vida a riscos políticos, inflacionários e jurídicos completamente desnecessários.
                             </p>
-                            <p className="leading-relaxed text-[#a0aabf]">
+                            <p className="leading-relaxed text-[#a0aabf] text-xl md:text-2xl">
                                 A elite global não joga com as mesmas regras. Enquanto você paga impostos excessivos e sofre com a desvalorização cambial, os verdadeiros detentores de riqueza operam em um nível acima das fronteiras geográficas.
                             </p>
                         </div>
@@ -77,8 +77,8 @@ const Problem: React.FC = () => {
                             {/* Card 1 */}
                             <div className="bg-[#03050a] border border-white/5 p-8 relative overflow-hidden group hover:border-gold/20 transition-colors duration-500">
                                 <TrendingDown className="absolute right-4 top-1/2 -translate-y-1/2 w-32 h-32 text-white/5 transition-transform duration-700 group-hover:scale-110 group-hover:text-gold/5" strokeWidth={1} />
-                                <h3 className="font-playfair text-gold text-xl font-bold mb-4 relative z-10">Risco Cambial</h3>
-                                <p className="text-sm leading-relaxed text-[#a0aabf] relative z-10 w-11/12">
+                                <h3 className="font-playfair text-gold text-2xl sm:text-3xl font-bold mb-4 relative z-10">Risco Cambial</h3>
+                                <p className="text-lg sm:text-xl leading-relaxed text-[#a0aabf] relative z-10 w-11/12">
                                     O Real perdeu 85% do seu poder de compra em dólar nas últimas duas décadas.
                                 </p>
                             </div>
@@ -86,8 +86,8 @@ const Problem: React.FC = () => {
                             {/* Card 2 */}
                             <div className="bg-[#03050a] border border-white/5 p-8 relative overflow-hidden group hover:border-gold/20 transition-colors duration-500">
                                 <Gavel className="absolute right-4 top-1/2 -translate-y-1/2 w-32 h-32 text-white/5 transition-transform duration-700 group-hover:scale-110 group-hover:text-gold/5" strokeWidth={1} />
-                                <h3 className="font-playfair text-gold text-xl font-bold mb-4 relative z-10">Insegurança Jurídica</h3>
-                                <p className="text-sm leading-relaxed text-[#a0aabf] relative z-10 w-11/12">
+                                <h3 className="font-playfair text-gold text-2xl sm:text-3xl font-bold mb-4 relative z-10">Insegurança Jurídica</h3>
+                                <p className="text-lg sm:text-xl leading-relaxed text-[#a0aabf] relative z-10 w-11/12">
                                     Um simples "canetaço" pode congelar seus ativos antes que você possa reagir.
                                 </p>
                             </div>

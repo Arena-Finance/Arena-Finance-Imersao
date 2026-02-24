@@ -54,12 +54,12 @@ const Hero: React.FC = () => {
                 </h1>
 
                 {/* Subtitle */}
-                <p className="hero-anim text-body text-[14px] sm:text-lg md:text-xl max-w-[90%] sm:max-w-3xl lg:max-w-4xl mb-8 sm:mb-12 text-gray-300 leading-relaxed">
+                <p className="hero-anim text-body text-xl sm:text-2xl md:text-3xl max-w-[90%] sm:max-w-4xl lg:max-w-5xl mb-8 sm:mb-12 text-gray-300 leading-relaxed">
                     Você trabalha duro para construir riqueza, mas a instabilidade jurídica, a inflação e a corrupção corroem o seu dinheiro todos os dias. <strong>Descubra como os super-ricos protegem e dolarizam seus ativos longe do Risco Brasil.</strong>
                 </p>
 
                 {/* Info Grid */}
-                <div className="hero-anim flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 font-mono text-xs sm:text-sm text-gray-400 mb-8 sm:mb-12 bg-white/5 shadow-[0_0_15px_rgba(255,255,255,0.02)] px-6 sm:px-10 py-4 sm:py-5 border border-white/10 w-fit">
+                <div className="hero-anim flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 font-mono text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-12 bg-white/5 shadow-[0_0_15px_rgba(255,255,255,0.02)] px-6 sm:px-10 py-4 sm:py-6 border border-white/10 w-fit">
                     <div className="flex items-center gap-3">
                         <span className="text-gold">📍</span> Balneário Camboriú, SC
                     </div>

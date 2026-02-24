@@ -78,10 +78,10 @@ const Features: React.FC = () => {
                             <div className="mb-8">
                                 {card.icon}
                             </div>
-                            <h3 className="font-playfair text-2xl font-bold mb-4 text-white group-hover:text-gold transition-colors pr-4">
+                            <h3 className="font-playfair text-3xl font-bold mb-4 text-white group-hover:text-gold transition-colors pr-4">
                                 {card.title}
                             </h3>
-                            <p className="font-montserrat text-[#a0aabf] leading-relaxed text-sm">
+                            <p className="font-montserrat text-[#a0aabf] leading-relaxed text-lg sm:text-xl">
                                 {card.desc}
                             </p>
                         </div>

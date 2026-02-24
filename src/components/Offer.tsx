@@ -18,9 +18,9 @@ const Offer: React.FC = () => {
                 <div className="w-full max-w-2xl bg-[#03050a] border border-white/5 rounded-none p-8 md:p-14 relative overflow-hidden">
 
                     <div className="text-center mb-10">
-                        <p className="font-mono text-gold text-[10px] uppercase tracking-[0.2em] font-bold mb-8">Primeiro lote disponível</p>
-                        <h2 className="font-playfair text-4xl md:text-5xl font-bold leading-tight text-white mb-2">Imersão Presencial</h2>
-                        <h3 className="font-playfair text-4xl md:text-5xl font-bold leading-tight text-gold">Balneário Camboriú, SC</h3>
+                        <p className="font-mono text-gold text-xs uppercase tracking-[0.2em] font-bold mb-8">Primeiro lote disponível</p>
+                        <h2 className="font-playfair text-5xl md:text-6xl font-bold leading-tight text-white mb-4">Imersão Presencial</h2>
+                        <h3 className="font-playfair text-3xl md:text-4xl font-bold leading-tight text-gold">Balneário Camboriú, SC</h3>
                     </div>
 
                     <div className="w-full h-[1px] bg-white/5 my-10"></div>
@@ -28,8 +28,8 @@ const Offer: React.FC = () => {
                     <ul className="offer-list space-y-6 mb-10">
                         {items.map((item, idx) => (
                             <li key={idx} className="offer-list-item flex items-center pl-4 md:pl-10">
-                                <CheckCircle2 className="w-5 h-5 text-gold mr-6 flex-shrink-0" />
-                                <span className="font-montserrat text-[#a0aabf] text-base md:text-lg">{item}</span>
+                                <CheckCircle2 className="w-6 h-6 text-gold mr-6 flex-shrink-0" />
+                                <span className="font-montserrat text-[#a0aabf] text-lg md:text-xl">{item}</span>
                             </li>
                         ))}
                     </ul>
@@ -42,7 +42,7 @@ const Offer: React.FC = () => {
                             <span className="text-6xl md:text-8xl tracking-tight">R$ 497,00</span>
                         </div>
 
-                        <button className="w-full bg-[#c9a039] hover:bg-[#d5ad45] text-black-abs font-bold text-lg py-5 px-8 font-montserrat tracking-widest uppercase transition-all duration-300">
+                        <button className="w-full bg-[#c9a039] hover:bg-[#d5ad45] text-black-abs font-black text-xl md:text-2xl py-6 px-10 font-montserrat tracking-widest uppercase transition-all duration-300">
                             INSCREVA-SE AGORA
                         </button>
 
