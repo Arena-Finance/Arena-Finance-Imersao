@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-deep text-white font-montserrat antialiased selection:bg-gold selection:text-black-abs;
+  }
+}
+
+@layer utilities {
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.05;
+  }
+
+  /* Magnetic button hover effect setup */
+  .btn-gold {
+    @apply relative overflow-hidden bg-gold text-black-abs font-bold uppercase tracking-wider px-8 py-4 transition-transform duration-300 ease-magnetic shadow-[0_0_20px_rgba(212,175,55,0.2)];
+  }
+
+  .btn-gold:hover {
+    @apply scale-[1.03] shadow-[0_0_30px_rgba(212,175,55,0.4)];
+  }
+
+  .btn-gold::before {
+    content: '';
+    @apply absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg] transition-all duration-700;
+  }
+
+  .btn-gold:hover::before {
+    @apply left-[200%];
+  }
+
+  /* Title presets */
+  .heading-hero {
+    @apply font-playfair font-black text-5xl md:text-6xl lg:text-7xl leading-tight text-white;
+  }
+  
+  .heading-section {
+    @apply font-playfair font-bold text-4xl md:text-5xl leading-tight text-white;
+  }
+
+  .text-body {
+    @apply font-montserrat text-lg md:text-xl text-gray-300 leading-relaxed tracking-tight;
+  }
+}
