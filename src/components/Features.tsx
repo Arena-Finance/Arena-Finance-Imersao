@@ -31,18 +31,18 @@ const Features: React.FC = () => {
     const cards = [
         {
             icon: <Globe className="w-8 h-8 text-gold block" />,
-            title: "Jurisdições Seguras",
-            desc: "Identifique países que respeitam a propriedade privada e oferecem segurança jurídica real para seu capital."
+            title: "Moedas Fortes",
+            desc: "Acesso direto a ativos denominados em Dólar, Euro e Franco Suíço, protegendo seu poder de compra global."
         },
         {
             icon: <Landmark className="w-8 h-8 text-gold block" />,
-            title: "Acesso a Crédito Global",
-            desc: "Aprenda a acessar as menores taxas de juros do mundo e alavancar seu patrimônio em moeda forte."
+            title: "Países de Primeiro Mundo",
+            desc: "Segurança política e leis sólidas que protegem o investidor privado acima de qualquer interesse estatal."
         },
         {
             icon: <Shield className="w-8 h-8 text-gold block" />,
-            title: "Escudo Legal",
-            desc: "Estruturas offshore, trusts e fundações para proteção patrimonial e blindagem contra litígios."
+            title: "Conhecimento de Elite",
+            desc: "O que separa você da estabilidade não é o tamanho da conta, é o acesso ao que o sistema não te conta."
         }
     ];
 
@@ -62,13 +62,13 @@ const Features: React.FC = () => {
             <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="text-center max-w-3xl mx-auto mb-20">
-                    <p className="font-mono text-gold text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">Metodologia Exclusiva</p>
+                    <p className="font-mono text-gold text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-4">Abertura de Horizonte</p>
                     <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6 text-white/95 tracking-wide">
-                        Os 3 Pilares da Soberania
+                        Chegou a hora de você jogar o Jogo Global.
                     </h2>
                     <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-8"></div>
                     <p className="text-body text-[#a0aabf] text-lg leading-relaxed">
-                        Nesta imersão, você não aprenderá teoria. Você sairá com um plano de ação para internacionalizar sua vida financeira.
+                        Existe um mundo financeiro muito maior e mais sofisticado além da B3, do Tesouro Direto e do seu gerente de bancão.
                     </p>
                 </div>
 

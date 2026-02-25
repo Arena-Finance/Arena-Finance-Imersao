@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Problem from './components/Problem';
 import Features from './components/Features';
 import Protocol from './components/Protocol';
+import Audience from './components/Audience';
 import Offer from './components/Offer';
 import Footer from './components/Footer';
 
@@ -16,6 +17,7 @@ function App() {
         <Problem />
         <Features />
         <Protocol />
+        <Audience />
         <Offer />
       </main>
       <Footer />

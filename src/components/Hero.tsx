@@ -48,14 +48,13 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Headline - Responsive with fluid text breaking */}
-                <h1 className="hero-anim font-montserrat font-black text-[1.85rem] sm:text-[3rem] md:text-[3.8rem] lg:text-[4.5rem] leading-[1.05] sm:leading-[1.05] text-white uppercase tracking-tighter mb-5 sm:mb-8 px-2 md:px-0">
-                    Ter 100% do seu patrimônio<br className="hidden sm:block" /> no Brasil não é patriotismo.<br />
-                    <span className="text-gold italic block mt-1 sm:mt-2">É incerteza política.</span>
+                <h1 className="hero-anim font-montserrat font-black text-[1.5rem] sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3.2rem] leading-[1.1] text-white uppercase tracking-tighter mb-5 sm:mb-8 px-2 md:px-0 max-w-4xl mx-auto">
+                    Uma única canetada em Brasília pode destruir o que você levou a vida toda para construir. <span className="text-gold italic">Ter 100% do seu patrimônio no Brasil não é patriotismo, é roleta russa.</span>
                 </h1>
 
                 {/* Subtitle */}
-                <p className="hero-anim text-body text-xl sm:text-2xl md:text-3xl max-w-[90%] sm:max-w-4xl lg:max-w-5xl mb-8 sm:mb-12 text-gray-300 leading-relaxed">
-                    Você trabalha duro para construir riqueza, mas a instabilidade jurídica, a inflação e a corrupção corroem o seu dinheiro todos os dias. <strong>Descubra como os super-ricos protegem e dolarizam seus ativos longe do Risco Brasil.</strong>
+                <p className="hero-anim text-body text-lg sm:text-xl md:text-2xl max-w-[90%] sm:max-w-4xl lg:max-w-5xl mb-8 sm:mb-12 text-gray-300 leading-relaxed mx-auto">
+                    O sistema quer manter você refém da insegurança, da inflação e de impostos abusivos. Descubra como acessar o que existe de mais sofisticado no mercado financeiro global e blindar o seu patrimônio nos países mais ricos e seguros do mundo.
                 </p>
 
                 {/* Info Grid */}
@@ -65,19 +64,18 @@ const Hero: React.FC = () => {
                     </div>
                     <div className="hidden sm:block text-white/20">|</div>
                     <div className="flex items-center gap-3">
-                        <span className="text-gold">📅</span> 04 de Abril de 2026
-                    </div>
-                    <div className="hidden sm:block text-white/20">|</div>
-                    <div className="flex items-center gap-3">
-                        <span className="text-gold">⏱️</span> 09h às 17h
+                        <span className="text-gold">📅</span> 28 de Março de 2026
                     </div>
                 </div>
 
                 {/* CTA */}
                 <div className="hero-anim">
-                    <button className="btn-gold text-[12px] sm:text-[15px] md:text-lg py-4 px-8 md:py-6 md:px-10">
-                        Garantir minha vaga
+                    <button className="btn-gold text-[12px] sm:text-[15px] md:text-lg py-4 px-8 md:py-6 md:px-10 mb-4">
+                        QUERO BLINDAR MEU PATRIMÔNIO AGORA
                     </button>
+                    <p className="text-[10px] sm:text-xs text-gray-500 font-mono tracking-widest uppercase">
+                        Vagas limitadas para a Imersão: Mapa da Riqueza Global.
+                    </p>
                 </div>
             </div>
         </section>
