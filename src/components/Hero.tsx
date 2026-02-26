@@ -70,7 +70,10 @@ const Hero: React.FC = () => {
 
                 {/* CTA */}
                 <div className="hero-anim">
-                    <button className="btn-gold text-[12px] sm:text-[15px] md:text-lg py-4 px-8 md:py-6 md:px-10 mb-4">
+                    <button
+                        onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="btn-gold text-[12px] sm:text-[15px] md:text-lg py-4 px-8 md:py-6 md:px-10 mb-4"
+                    >
                         QUERO PROTEGER MEU PATRIMÔNIO AGORA
                     </button>
                     <p className="text-[10px] sm:text-xs text-gray-500 font-mono tracking-widest uppercase">

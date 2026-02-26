@@ -10,7 +10,8 @@ const Offer: React.FC = () => {
         {
             id: 1,
             name: "Lote 01",
-            price: "497,00",
+            price: "447,00",
+            originalPrice: "997,00",
             desc: "Direito acompanhante (cônjuge ou sócio)",
             dateRange: "Até 02.03",
             endDate: new Date('2026-03-03T00:00:00') // Ends at the start of March 3rd
@@ -41,14 +42,13 @@ const Offer: React.FC = () => {
     const activeLot = lots[currentLotIndex];
 
     return (
-        <section className="py-24 bg-black-abs relative border-t border-white/5 flex items-center justify-center">
+        <section id="offer" className="py-24 bg-black-abs relative border-t border-white/5 flex items-center justify-center">
 
             <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
                 {/* The Card */}
                 <div className="w-full max-w-2xl bg-[#03050a] border border-white/5 rounded-none p-8 md:p-14 relative overflow-hidden text-center">
 
                     <div className="mb-10 text-center">
-                        <p className="font-mono text-gold text-xs uppercase tracking-[0.2em] font-bold mb-8">Última oportunidade disponível</p>
                         <h2 className="font-playfair text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
                             A próxima crise não vai avisar antes de chegar.
                         </h2>
@@ -81,6 +81,9 @@ const Offer: React.FC = () => {
                                         <p className={`font-mono text-[11px] uppercase font-bold mb-3 tracking-widest ${isCurrent ? 'text-gold' : 'text-gray-400'}`}>
                                             {lot.name}
                                         </p>
+                                        {isCurrent && lot.originalPrice && (
+                                            <p className="text-gray-500 line-through text-xs font-mono mb-1">R$ {lot.originalPrice}</p>
+                                        )}
                                         <p className="font-playfair text-white text-3xl font-bold mb-2">R$ {lot.price}</p>
                                         <p className={`text-[11px] leading-snug mb-4 ${isCurrent ? 'text-white/90' : 'text-gray-400'}`}>
                                             {lot.desc}
@@ -99,6 +102,9 @@ const Offer: React.FC = () => {
                             <span className="text-sm font-mono uppercase tracking-[0.3em] mb-4 text-gray-500">
                                 Investimento Atual {activeLot.name}
                             </span>
+                            {activeLot.originalPrice && (
+                                <span className="text-xl md:text-2xl text-gray-500 line-through font-mono mb-2">R$ {activeLot.originalPrice}</span>
+                            )}
                             <span className="text-7xl md:text-9xl tracking-tighter drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]">R$ {activeLot.price}</span>
                         </div>
 
