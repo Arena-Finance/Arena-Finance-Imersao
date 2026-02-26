@@ -20,7 +20,7 @@ const speakers = [
     {
         name: "Michele Tolazzi",
         role: "CEO Arena da Riqueza & Estrategista",
-        image: "/speakers/michele_v2.png",
+        image: "/speakers/michele_v3.jpg",
         bio: "Empresária e estrategista de negócios focada na estruturação, gestão e expansão de operações no setor de crédito. Como CEO da Arena da Riqueza, lidera a performance comercial e organização estratégica voltada ao crescimento patrimonial sustentável."
     }
 ];
