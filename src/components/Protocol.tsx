@@ -79,7 +79,7 @@ const Protocol: React.FC = () => {
                     <div className="protocol-item flex items-start gap-6 p-8 bg-[#050812] border border-white/5 hover:border-gold/20 transition-all group">
                         <CheckCircle2 className="w-8 h-8 text-gold flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
                         <div>
-                            <h3 className="text-2xl font-bold text-white mb-3">Blindagem Patrimonial</h3>
+                            <h3 className="text-2xl font-bold text-white mb-3">Proteção Patrimonial</h3>
                             <p className="font-montserrat text-[#a0aabf] text-base md:text-lg leading-relaxed">
                                 Como criar um escudo ao redor do futuro financeiro da sua família, tornando-o inalcançável para as instabilidades brasileiras.
                             </p>

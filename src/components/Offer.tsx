@@ -61,30 +61,32 @@ const Offer: React.FC = () => {
                     </p>
 
                     {/* Lots Information Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                         {lots.map((lot, index) => {
                             const isCurrent = index === currentLotIndex;
                             return (
                                 <div
                                     key={lot.id}
-                                    className={`p-4 border transition-all duration-500 rounded-sm relative ${isCurrent
-                                            ? 'border-gold/50 bg-gold/10 scale-105 shadow-[0_0_20px_rgba(212,175,55,0.15)] z-10'
-                                            : 'border-white/5 bg-white/5 opacity-40 grayscale'
+                                    className={`p-6 border transition-all duration-500 rounded-sm relative flex flex-col justify-between min-h-[180px] ${isCurrent
+                                        ? 'border-gold bg-gold/10 scale-105 shadow-[0_0_30px_rgba(212,175,55,0.2)] z-10'
+                                        : 'border-white/10 bg-white/5 opacity-70'
                                         }`}
                                 >
                                     {isCurrent && (
-                                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-black-abs font-mono font-bold text-[8px] px-2 py-0.5 uppercase tracking-tighter">
-                                            Atual
+                                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-black-abs font-mono font-bold text-[10px] px-3 py-1 uppercase tracking-widest shadow-lg">
+                                            Lote Atual
                                         </div>
                                     )}
-                                    <p className={`font-mono text-[10px] uppercase font-bold mb-2 ${isCurrent ? 'text-gold' : 'text-gray-400'}`}>
-                                        {lot.name} {isCurrent && '(Atual)'}
-                                    </p>
-                                    <p className="font-playfair text-white text-xl font-bold mb-1">R$ {lot.price}</p>
-                                    <p className="text-[10px] text-gray-400 leading-tight h-8 flex items-center justify-center">
-                                        {lot.desc}
-                                    </p>
-                                    <p className={`text-[10px] mt-2 font-mono ${isCurrent ? 'text-gold' : 'text-gray-400'}`}>
+                                    <div>
+                                        <p className={`font-mono text-[11px] uppercase font-bold mb-3 tracking-widest ${isCurrent ? 'text-gold' : 'text-gray-400'}`}>
+                                            {lot.name}
+                                        </p>
+                                        <p className="font-playfair text-white text-3xl font-bold mb-2">R$ {lot.price}</p>
+                                        <p className={`text-[11px] leading-snug mb-4 ${isCurrent ? 'text-white/90' : 'text-gray-400'}`}>
+                                            {lot.desc}
+                                        </p>
+                                    </div>
+                                    <p className={`text-[11px] font-mono font-bold tracking-tight ${isCurrent ? 'text-gold' : 'text-gray-500'}`}>
                                         {lot.dateRange}
                                     </p>
                                 </div>
@@ -92,24 +94,24 @@ const Offer: React.FC = () => {
                         })}
                     </div>
 
-                    <div className="text-center pt-2">
-                        <div className="flex flex-col items-center justify-center font-playfair font-bold text-gold mb-10">
-                            <span className="text-sm font-mono uppercase tracking-[0.2em] mb-2 text-gray-500">
-                                Valor Atual {activeLot.name}
+                    <div className="text-center pt-4">
+                        <div className="flex flex-col items-center justify-center font-playfair font-bold text-gold mb-12">
+                            <span className="text-sm font-mono uppercase tracking-[0.3em] mb-4 text-gray-500">
+                                Investimento Atual {activeLot.name}
                             </span>
-                            <span className="text-6xl md:text-8xl tracking-tight">R$ {activeLot.price}</span>
+                            <span className="text-7xl md:text-9xl tracking-tighter drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]">R$ {activeLot.price}</span>
                         </div>
 
-                        <button className="w-full bg-[#c9a039] hover:bg-[#d5ad45] text-black-abs font-black text-xl md:text-2xl py-6 px-10 font-montserrat tracking-widest uppercase transition-all duration-300">
-                            GARANTIR MINHA VAGA E PROTEGER MEU FUTURO
+                        <button className="w-full bg-[#c9a039] hover:bg-[#d5ad45] text-black-abs font-black text-xl md:text-3xl py-7 px-10 font-montserrat tracking-widest uppercase transition-all duration-300 shadow-[0_10px_30px_rgba(201,160,57,0.2)] hover:shadow-[0_15px_40px_rgba(201,160,57,0.3)] hover:-translate-y-1">
+                            GARANTIR MINHA VAGA AGORA
                         </button>
 
-                        <div className="mt-8 flex flex-col items-center justify-center text-[10px] sm:text-xs font-mono text-gold/80 uppercase tracking-widest leading-relaxed">
-                            <div className="flex flex-col items-center gap-2">
-                                <div className="flex items-center gap-2">
-                                    <Shield className="w-4 h-4" /> Vagas Limitadas
+                        <div className="mt-10 flex flex-col items-center justify-center text-[10px] sm:text-xs font-mono text-gold/80 uppercase tracking-widest leading-relaxed">
+                            <div className="flex flex-col items-center gap-3">
+                                <div className="flex items-center gap-2 bg-white/5 px-4 py-2 border border-white/5">
+                                    <Shield className="w-4 h-4 text-gold" /> Vagas Limitadas por Ordem de Compra
                                 </div>
-                                <span className="text-white/60">Balneário Camboriú, SC | 28 de Março de 2026</span>
+                                <span className="text-white/60 tracking-[0.2em] mt-2">Balneário Camboriú, SC | 28 de Março de 2026</span>
                             </div>
                         </div>
                     </div>

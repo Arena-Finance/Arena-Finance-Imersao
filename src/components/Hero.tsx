@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
 
                 {/* Subtitle */}
                 <p className="hero-anim text-body text-lg sm:text-xl md:text-2xl max-w-[90%] sm:max-w-4xl lg:max-w-5xl mb-8 sm:mb-12 text-gray-300 leading-relaxed mx-auto">
-                    O sistema quer manter você refém da insegurança, da inflação e de impostos abusivos. Descubra como acessar o que existe de mais sofisticado no mercado financeiro global e blindar o seu patrimônio nos países mais ricos e seguros do mundo.
+                    O sistema quer manter você refém da insegurança, da inflação e de impostos abusivos. Descubra como acessar o que existe de mais sofisticado no mercado financeiro global e proteger o seu patrimônio nos países mais ricos e seguros do mundo.
                 </p>
 
                 {/* Info Grid */}
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
                 {/* CTA */}
                 <div className="hero-anim">
                     <button className="btn-gold text-[12px] sm:text-[15px] md:text-lg py-4 px-8 md:py-6 md:px-10 mb-4">
-                        QUERO BLINDAR MEU PATRIMÔNIO AGORA
+                        QUERO PROTEGER MEU PATRIMÔNIO AGORA
                     </button>
                     <p className="text-[10px] sm:text-xs text-gray-500 font-mono tracking-widest uppercase">
                         Vagas limitadas para a Imersão: Mapa da Riqueza Global.
