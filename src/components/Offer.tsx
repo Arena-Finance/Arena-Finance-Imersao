@@ -106,6 +106,7 @@ const Offer: React.FC = () => {
                                 <span className="text-xl md:text-2xl text-gray-500 line-through font-mono mb-2">R$ {activeLot.originalPrice}</span>
                             )}
                             <span className="text-7xl md:text-9xl tracking-tighter drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]">R$ {activeLot.price}</span>
+                            <span className="text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] mt-4 text-white/40 italic">Direito a acompanhante (cônjuge ou sócio)</span>
                         </div>
 
                         <button className="w-full bg-[#c9a039] hover:bg-[#d5ad45] text-black-abs font-black text-xl md:text-3xl py-7 px-10 font-montserrat tracking-widest uppercase transition-all duration-300 shadow-[0_10px_30px_rgba(201,160,57,0.2)] hover:shadow-[0_15px_40px_rgba(201,160,57,0.3)] hover:-translate-y-1">
