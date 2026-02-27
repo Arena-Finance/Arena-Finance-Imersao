@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const speakers = [
+const speakers: { name: string; role: string; image: string; bio: string; blendMode?: boolean }[] = [
     {
         name: "Otávio Moura",
         role: "Planejador Financeiro & Estrategista",
@@ -20,7 +20,7 @@ const speakers = [
     {
         name: "Michele Tolazzi",
         role: "CEO Arena da Riqueza & Estrategista",
-        image: "/speakers/michele_v3.jpg",
+        image: "/speakers/michele_bg_removed.png",
         bio: "Empresária e estrategista de negócios focada na estruturação, gestão e expansão de operações no setor de crédito. Como CEO da Arena da Riqueza, lidera a performance comercial e organização estratégica voltada ao crescimento patrimonial sustentável."
     }
 ];
@@ -89,7 +89,8 @@ const Speakers: React.FC = () => {
                                 <img
                                     src={speaker.image}
                                     alt={speaker.name}
-                                    className="w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-[1.05] relative z-10"
+                                    className={`w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-[1.05] relative z-10 ${speaker.blendMode ? 'mix-blend-multiply' : ''}`}
+                                    style={speaker.blendMode ? { filter: 'contrast(1.15) brightness(0.95)' } : {}}
                                 />
                             </div>
 
