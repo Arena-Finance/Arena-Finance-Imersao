@@ -7,8 +7,18 @@ const Hero: React.FC = () => {
     useEffect(() => {
         let ctx = gsap.context(() => {
             gsap.fromTo('.hero-anim',
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1, duration: 1.2, stagger: 0.08, ease: 'power3.out', delay: 0.2 }
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1, stagger: 0.1, ease: 'power3.out', delay: 0.1 }
+            );
+
+            gsap.fromTo('.hero-anim-right',
+                { x: 50, opacity: 0 },
+                { x: 0, opacity: 1, duration: 1.2, ease: 'power2.out', delay: 0.4 }
+            );
+
+            gsap.fromTo('.hero-float',
+                { y: 20, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1, ease: 'back.out(1.7)', delay: 0.8 }
             );
         }, containerRef);
 
@@ -18,69 +28,105 @@ const Hero: React.FC = () => {
     return (
         <section
             ref={containerRef}
-            className="relative min-h-[100dvh] flex items-center justify-center pt-12 pb-24 md:pt-16 md:pb-32 overflow-hidden bg-navy-deep"
+            className="relative min-h-[100dvh] w-full overflow-hidden bg-navy-deep flex flex-col justify-center"
         >
-            {/* Background Grid Pattern */}
-            <div className="absolute inset-0 z-0 bg-navy-deep" />
-            <div className="absolute inset-0 z-0 opacity-10"
+            {/* Split Screen Background - Right Side Polygon */}
+            {/* The reference has a bright gradient. We use a premium dark gradient with a gold subtle hint */}
+            <div
+                className="absolute top-0 right-0 w-full lg:w-[65%] h-full z-0 bg-gradient-to-br from-[#0c132b] via-black-abs to-black-abs opacity-90"
                 style={{
-                    backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px)',
-                    backgroundSize: '40px 40px'
+                    clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)',
+                    WebkitClipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)'
                 }}
-            />
-            {/* Gradient Overlay for depth */}
-            <div className="absolute inset-0 z-10 bg-gradient-to-t from-navy-deep via-transparent to-transparent" />
-
-            <div className="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
-
-                {/* Brand Header Centered */}
-                <div className="hero-anim flex flex-col items-center justify-center mb-6 sm:mb-10 lg:mb-12">
-                    <img src="/images/Arena_Riqueza_logo.svg" alt="Arena da Riqueza" className="h-[70px] sm:h-[85px] md:h-24 w-auto mb-4 sm:mb-6" />
-                    <span className="text-white/90 text-[10px] sm:text-xs md:text-[15px] font-playfair tracking-widest uppercase">Imersão Presencial: Mapa da Riqueza Global</span>
-                </div>
-
-                {/* Badges */}
-                <div className="hero-anim flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[9px] sm:text-[11px] md:text-sm font-mono tracking-widest uppercase mb-6 sm:mb-8">
-                    <div className="flex items-center gap-2 border border-white/10 py-1.5 px-3">
-                        <div className="w-2 h-2 rounded-full bg-red-600"></div>
-                        <span className="text-gray-400">Alerta de Risco Jurisdicional</span>
-                    </div>
-                </div>
-
-                {/* Headline - Responsive with fluid text breaking */}
-                <h1 className="hero-anim font-montserrat font-black text-[1.5rem] sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3.2rem] leading-[1.1] text-white uppercase tracking-tighter mb-5 sm:mb-8 px-2 md:px-0 max-w-4xl mx-auto">
-                    Uma única canetada em Brasília pode destruir o que você levou a vida toda para construir. <span className="text-gold italic">Ter 100% do seu patrimônio no Brasil não é patriotismo, é roleta russa.</span>
-                </h1>
-
-                {/* Subtitle */}
-                <p className="hero-anim text-body text-lg sm:text-xl md:text-2xl max-w-[90%] sm:max-w-4xl lg:max-w-5xl mb-8 sm:mb-12 text-gray-300 leading-relaxed mx-auto">
-                    O sistema quer manter você refém da insegurança, da inflação e de impostos abusivos. Descubra como acessar o que existe de mais sofisticado no mercado financeiro global e proteger o seu patrimônio nos países mais ricos e seguros do mundo.
-                </p>
-
-                {/* Info Grid */}
-                <div className="hero-anim flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 font-mono text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-12 bg-white/5 shadow-[0_0_15px_rgba(255,255,255,0.02)] px-6 sm:px-10 py-4 sm:py-6 border border-white/10 w-fit">
-                    <div className="flex items-center gap-3">
-                        <span className="text-gold">📍</span> Balneário Camboriú, SC
-                    </div>
-                    <div className="hidden sm:block text-white/20">|</div>
-                    <div className="flex items-center gap-3">
-                        <span className="text-gold">📅</span> 28 de Março de 2026
-                    </div>
-                </div>
-
-                {/* CTA */}
-                <div className="hero-anim">
-                    <button
-                        onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="btn-gold text-[12px] sm:text-[15px] md:text-lg py-4 px-8 md:py-6 md:px-10 mb-4"
-                    >
-                        QUERO PROTEGER MEU PATRIMÔNIO AGORA
-                    </button>
-                    <p className="text-[10px] sm:text-xs text-gray-500 font-mono tracking-widest uppercase">
-                        Vagas limitadas para a Imersão: Mapa da Riqueza Global.
-                    </p>
-                </div>
+            >
+                {/* Wavy line texture simulation for the right side */}
+                <svg className="absolute inset-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="wave" x="0" y="0" width="100" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M 0 20 Q 25 0 50 20 T 100 20" fill="none" stroke="#D4AF37" strokeWidth="1" />
+                        </pattern>
+                    </defs>
+                    <rect x="0" y="0" width="100%" height="100%" fill="url(#wave)" />
+                </svg>
             </div>
+
+            {/* Otávio Full Height Photo */}
+            <img
+                src="/images/otavio_hero_5_cutout.png"
+                alt="Otávio Moura"
+                className="hero-anim-right absolute z-10 bottom-0 right-[-25%] sm:right-[-10%] md:right-[0%] lg:right-[0%] xl:right-[5%] h-[100%] w-auto object-contain object-bottom drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] filter contrast-110 grayscale-[10%] pointer-events-none"
+            />
+
+            <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[100dvh] flex flex-row items-center justify-between pointer-events-none">
+
+                {/* Left Column: Content */}
+                <div className="w-[60%] lg:w-[50%] flex flex-col items-start text-left pb-12 lg:pb-0 pointer-events-auto">
+
+                    {/* Tag / Overhead (Red text in reference) */}
+                    <div className="hero-anim flex items-center gap-2 mb-4">
+                        <img src="/images/Arena_Riqueza_logo.svg" alt="Arena da Riqueza" className="h-[30px] sm:h-[40px] w-auto" />
+                        <span className="text-red-500 font-mono text-[9px] sm:text-[11px] tracking-widest uppercase ml-2 pt-1 font-bold">
+                            Alerta Jurisdicional 2026
+                        </span>
+                    </div>
+
+                    {/* Headline */}
+                    <h1 className="hero-anim font-montserrat font-black text-[2rem] sm:text-[2.5rem] md:text-[3.2rem] lg:text-[3.5rem] leading-[1.05] text-white uppercase tracking-tighter mb-6 relative">
+                        UMA ÚNICA CANETADA EM BRASÍLIA
+                        <br />
+                        <span className="text-white">PODE DESTRUIR</span>
+                        <br />
+                        <span className="text-gold italic font-playfair tracking-normal normal-case text-[2.2rem] sm:text-[2.8rem] md:text-[3.6rem] lg:text-[4rem] leading-none block mt-2">
+                            A sua vida toda.
+                        </span>
+                    </h1>
+
+                    {/* Subtitle */}
+                    <p className="hero-anim text-body text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed mb-8 max-w-[90%] font-medium">
+                        Ter 100% do seu patrimônio no Brasil não é patriotismo, é roleta russa. Descubra como acessar o que existe de mais sofisticado no mercado global. O risco real que você corre hoje é incalculável.
+                    </p>
+
+                    {/* Button */}
+                    <div className="hero-anim flex flex-col sm:flex-row items-start gap-4 w-full sm:w-auto mt-2">
+                        <button
+                            onClick={() => document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="bg-gold hover:bg-white text-black-abs px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 font-bold font-mono text-[10px] sm:text-sm md:text-base uppercase tracking-widest transition-all duration-300 w-auto text-center whitespace-nowrap"
+                            style={{ borderRadius: '40px' }}
+                        >
+                            GARANTA MINHA VAGA AGORA
+                        </button>
+                    </div>
+                </div>
+
+                {/* Right Column: Floating Card */}
+                <div className="w-[40%] lg:w-[50%] relative h-[100dvh] flex justify-center lg:justify-end items-center pointer-events-auto">
+
+                    {/* Floating Glass Card (Event Info) Overlapping the photo */}
+                    <div className="hero-float absolute bottom-[10%] sm:bottom-[15%] lg:bottom-[10%] xl:bottom-[15%] right-[-10%] lg:right-[10%] xl:right-[15%] w-[130px] sm:w-auto max-w-[280px] sm:max-w-[320px] bg-[#0c132b]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-3 sm:p-6 shadow-[0_20px_50px_rgba(0,0,0,0.8)] scale-[0.6] sm:scale-75 lg:scale-100 origin-bottom-right lg:origin-bottom-left z-20">
+                        <p className="text-gray-400 text-[8px] sm:text-[10px] uppercase tracking-widest font-mono mb-1 sm:mb-2">Imersão Exclusiva</p>
+                        <h3 className="text-white font-montserrat font-bold text-xs sm:text-lg leading-tight mb-2 sm:mb-4">Mapa da Riqueza Global</h3>
+
+                        <div className="flex flex-col gap-2 sm:gap-3">
+                            <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-300">
+                                <span className="text-gold">
+                                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                </span>
+                                Balneário Camboriú, SC
+                            </div>
+                            <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-gray-300">
+                                <span className="text-gold">
+                                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                </span>
+                                28 de Março, 2026
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
         </section>
     );
 };

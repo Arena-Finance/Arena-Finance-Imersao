@@ -10,9 +10,9 @@ const Offer: React.FC = () => {
         {
             id: 1,
             name: "Lote 01",
-            price: "447,00",
+            price: "599,00",
             originalPrice: "997,00",
-            desc: "Direito acompanhante (cônjuge ou sócio)",
+            desc: "Ingresso Individual",
             dateRange: "Até 02.03",
             endDate: new Date('2026-03-03T00:00:00') // Ends at the start of March 3rd
         },
@@ -29,8 +29,8 @@ const Offer: React.FC = () => {
             name: "Lote 03",
             price: "1.997,00",
             desc: "Ingresso Individual",
-            dateRange: "16.03 em diante",
-            endDate: new Date('2026-03-29T00:00:00') // Ends after the event
+            dateRange: "16.03 até 26.03",
+            endDate: new Date('2026-03-27T00:00:00') // Ends after Mar 26th
         }
     ], []);
 
@@ -106,12 +106,12 @@ const Offer: React.FC = () => {
                                 <span className="text-xl md:text-2xl text-gray-500 line-through font-mono mb-2">R$ {activeLot.originalPrice}</span>
                             )}
                             <span className="text-7xl md:text-9xl tracking-tighter drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]">R$ {activeLot.price}</span>
-                            <span className="text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] mt-4 text-white/40 italic">Direito a acompanhante (cônjuge ou sócio)</span>
+                            <span className="text-[10px] md:text-xs font-mono uppercase tracking-[0.2em] mt-4 text-white/40 italic">{activeLot.desc}</span>
                         </div>
 
-                        <button className="w-full bg-[#c9a039] hover:bg-[#d5ad45] text-black-abs font-black text-xl md:text-3xl py-7 px-10 font-montserrat tracking-widest uppercase transition-all duration-300 shadow-[0_10px_30px_rgba(201,160,57,0.2)] hover:shadow-[0_15px_40px_rgba(201,160,57,0.3)] hover:-translate-y-1">
+                        <a href="https://www.sympla.com.br/evento/imersao-mapa-da-riqueza-global-protecao-e-inteligencia-patrimonial/3327063" target="_blank" rel="noopener noreferrer" className="block w-full bg-[#c9a039] hover:bg-[#d5ad45] text-black-abs font-black text-xl md:text-3xl py-7 px-10 font-montserrat tracking-widest uppercase transition-all duration-300 shadow-[0_10px_30px_rgba(201,160,57,0.2)] hover:shadow-[0_15px_40px_rgba(201,160,57,0.3)] hover:-translate-y-1">
                             GARANTIR MINHA VAGA AGORA
-                        </button>
+                        </a>
 
                         <div className="mt-10 flex flex-col items-center justify-center text-[10px] sm:text-xs font-mono text-gold/80 uppercase tracking-widest leading-relaxed">
                             <div className="flex flex-col items-center gap-3">
