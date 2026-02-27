@@ -1,33 +1,40 @@
-import React, { useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Shield } from 'lucide-react';
 
 const Offer: React.FC = () => {
     // Current date for simulation or real usage
     // Using 2026 as the reference year since the event is in 2026
-    const now = new Date();
+    const [now, setNow] = useState(new Date());
+
+    useEffect(() => {
+        const timer = setInterval(() => setNow(new Date()), 1000 * 60); // update every minute to guarantee automatic shift
+        return () => clearInterval(timer);
+    }, []);
 
     const lots = useMemo(() => [
         {
             id: 1,
             name: "Lote 01",
-            price: "599,00",
-            originalPrice: "997,00",
-            desc: "Ingresso Individual",
-            dateRange: "Até 02.03",
-            endDate: new Date('2026-03-03T00:00:00') // Ends at the start of March 3rd
+            price: "997,00",
+            originalPrice: "1.997,00",
+            desc: "Ingresso + Direito a Acompanhante",
+            dateRange: "Até 08.03",
+            endDate: new Date('2026-03-09T00:00:00') // Ends at the start of March 9th
         },
         {
             id: 2,
             name: "Lote 02",
-            price: "997,00",
+            price: "1.997,00",
+            originalPrice: "3.997,00",
             desc: "Ingresso Individual",
-            dateRange: "03.03 até 15.03",
+            dateRange: "09.03 até 15.03",
             endDate: new Date('2026-03-16T00:00:00') // Ends at the start of March 16th
         },
         {
             id: 3,
             name: "Lote 03",
-            price: "1.997,00",
+            price: "3.997,00",
+            originalPrice: undefined,
             desc: "Ingresso Individual",
             dateRange: "16.03 até 26.03",
             endDate: new Date('2026-03-27T00:00:00') // Ends after Mar 26th
