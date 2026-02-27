@@ -28,15 +28,14 @@ const Hero: React.FC = () => {
     return (
         <section
             ref={containerRef}
-            className="relative min-h-[100dvh] w-full overflow-hidden bg-navy-deep flex flex-col justify-center"
+            className="relative min-h-[100dvh] w-full overflow-hidden bg-black-abs flex flex-col justify-center"
         >
             {/* Split Screen Background - Right Side Polygon */}
             {/* The reference has a bright gradient. We use a premium dark gradient with a gold subtle hint */}
             <div
                 className="absolute top-0 right-0 w-full lg:w-[65%] h-full z-0 bg-gradient-to-br from-[#0c132b] via-black-abs to-black-abs opacity-90"
                 style={{
-                    clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)',
-                    WebkitClipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)'
+                    clipPath: window.innerWidth > 1024 ? 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)' : 'none',
                 }}
             >
                 {/* Wavy line texture simulation for the right side */}
