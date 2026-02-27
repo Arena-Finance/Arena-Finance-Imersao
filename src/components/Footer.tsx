@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
                     <p className="text-body text-2xl font-playfair italic text-white/90 mb-10 max-w-3xl leading-relaxed">
                         "Quem tem bom senso não espera o país quebrar para comprar o bote salva-vidas. As vagas presenciais em Balneário Camboriú são <strong className="text-gold font-black not-italic border-b border-gold/50">restritas pelo espaço físico</strong> e para garantir a qualidade extrema das conexões na sala."
                     </p>
-                    <button className="btn-gold py-5 px-10 rounded-sm">
+                    <a href="https://www.sympla.com.br/evento/imersao-mapa-da-riqueza-global-protecao-e-inteligencia-patrimonial/3327063" target="_blank" rel="noopener noreferrer" className="btn-gold py-5 px-10 rounded-sm inline-block">
                         Quero Minha Vaga Antes Que Esgote
-                    </button>
+                    </a>
                 </div>
 
                 {/* Logo */}

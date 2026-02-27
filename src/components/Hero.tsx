@@ -62,10 +62,14 @@ const Hero: React.FC = () => {
                 {/* Left Column: Content */}
                 <div className="w-[60%] lg:w-[50%] flex flex-col items-start text-left pb-12 lg:pb-0 pointer-events-auto">
 
+                    {/* Logo */}
+                    <div className="hero-anim w-full lg:w-[90%] xl:w-[85%] flex justify-start mb-6">
+                        <img src="/images/Arena_Riqueza_logo.svg" alt="Arena da Riqueza" className="h-[50px] sm:h-[70px] md:h-[90px] w-auto drop-shadow-md" />
+                    </div>
+
                     {/* Tag / Overhead (Red text in reference) */}
-                    <div className="hero-anim flex items-center gap-2 mb-4">
-                        <img src="/images/Arena_Riqueza_logo.svg" alt="Arena da Riqueza" className="h-[30px] sm:h-[40px] w-auto" />
-                        <span className="text-red-500 font-mono text-[9px] sm:text-[11px] tracking-widest uppercase ml-2 pt-1 font-bold">
+                    <div className="hero-anim flex items-center mb-4">
+                        <span className="text-red-500 font-mono text-[9px] sm:text-[11px] tracking-widest uppercase font-bold">
                             Alerta Jurisdicional 2026
                         </span>
                     </div>
