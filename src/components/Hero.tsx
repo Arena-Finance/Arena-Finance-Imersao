@@ -69,7 +69,7 @@ const Hero: React.FC = () => {
                     {/* Tag / Overhead (Red text in reference) */}
                     <div className="hero-anim flex items-center mb-4">
                         <span className="text-red-500 font-mono text-[9px] sm:text-[11px] tracking-widest uppercase font-bold">
-                            Insegurança Jurídica
+                            Alerta de Insegurança Jurídica
                         </span>
                     </div>
 
