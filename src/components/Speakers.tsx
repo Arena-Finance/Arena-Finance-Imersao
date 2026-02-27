@@ -20,8 +20,9 @@ const speakers: { name: string; role: string; image: string; bio: string; blendM
     {
         name: "Michele Tolazzi",
         role: "CEO Arena da Riqueza & Estrategista",
-        image: "/speakers/michele_bg_removed.png",
-        bio: "Empresária e estrategista de negócios focada na estruturação, gestão e expansão de operações no setor de crédito. Como CEO da Arena da Riqueza, lidera a performance comercial e organização estratégica voltada ao crescimento patrimonial sustentável."
+        image: "/speakers/michele_v6.png",
+        bio: "Empresária e estrategista de negócios focada na estruturação, gestão e expansão de operações no setor de crédito. Como CEO da Arena da Riqueza, lidera a performance comercial e organização estratégica voltada ao crescimento patrimonial sustentável.",
+        blendMode: true
     }
 ];
 
@@ -82,15 +83,17 @@ const Speakers: React.FC = () => {
                             className="group flex flex-col items-center text-center"
                         >
                             {/* Cinematic Portrait Container - Ampliado para impacto visual */}
-                            <div className="relative w-64 h-64 md:w-80 md:h-80 mb-8 overflow-hidden rounded-full bg-black-abs border border-white/5 transition-all duration-700 group-hover:border-gold/30 shadow-[0_0_50px_rgba(0,0,0,1)]">
+                            <div className="relative w-64 h-64 md:w-80 md:h-80 mb-8 overflow-hidden rounded-full border border-white/5 transition-all duration-700 group-hover:border-gold/30 shadow-[0_0_50px_rgba(0,0,0,1)] bg-black-abs flex items-center justify-center">
                                 {/* Depth Lights */}
                                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(212,175,55,0.08),transparent_70%)] opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
 
                                 <img
                                     src={speaker.image}
                                     alt={speaker.name}
-                                    className={`w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-[1.05] relative z-10 ${speaker.blendMode ? 'mix-blend-multiply' : ''}`}
-                                    style={speaker.blendMode ? { filter: 'contrast(1.15) brightness(0.95)' } : {}}
+                                    className={`w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-[1.05] relative z-10 bg-black-abs ${speaker.blendMode ? 'mix-blend-normal' : ''}`}
+                                    style={{
+                                        ...(speaker.blendMode ? { filter: 'contrast(1.15) brightness(0.95)' } : {})
+                                    }}
                                 />
                             </div>
 
