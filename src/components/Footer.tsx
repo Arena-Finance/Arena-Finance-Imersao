@@ -34,6 +34,9 @@ const Footer: React.FC = () => {
                     <p className="text-[10px] text-gray-700 font-montserrat mt-4">
                         Arena Global é uma marca fantasia pertencente e operada por OJRM CAPITAL LTDA — CNPJ: 55.610.560/0001-50.
                     </p>
+                    <p className="text-[10px] text-gray-700 font-montserrat mt-1">
+                        Contato: +55 47 99960-0200 · contato@arenaglobal.com.br
+                    </p>
                 </div>
 
             </div>
