@@ -31,6 +31,9 @@ const Footer: React.FC = () => {
                     <p className="text-[10px] sm:text-xs text-gray-600 font-montserrat leading-relaxed text-justify sm:text-center max-w-4xl">
                         A Arena Finance e a Arena da Riqueza atuam exclusivamente com educação financeira e networking. Não somos corretora de valores, consultoria individualizada ou gestora de recursos registrada na CVM ou SEC. O conteúdo da imersão tem caráter 100% educacional, não configurando oferta pública, recomendação ou indicação de compra/venda de ativos financeiros. Investimentos envolvem riscos. As decisões tomadas a partir do conhecimento adquirido são de exclusiva responsabilidade do aluno.
                     </p>
+                    <p className="text-[10px] text-gray-700 font-montserrat mt-4">
+                        Arena Global é uma marca fantasia pertencente e operada por OJRM CAPITAL LTDA — CNPJ: 55.610.560/0001-50.
+                    </p>
                 </div>
 
             </div>
