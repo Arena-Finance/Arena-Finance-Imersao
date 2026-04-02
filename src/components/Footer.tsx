@@ -18,11 +18,11 @@ const Footer: React.FC = () => {
                 <div className="mb-16 flex flex-col items-center">
                     <img
                         src="/images/Arena_Riqueza_logo.svg"
-                        alt="Arena da Riqueza"
+                        alt="Arena Global"
                         className="h-16 w-auto object-contain mb-3"
                     />
                     <p className="font-mono text-xs uppercase tracking-widest text-gray-600">
-                        Powered by Arena da Riqueza
+                        Powered by Arena Global
                     </p>
                 </div>
 

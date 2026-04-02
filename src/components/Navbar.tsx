@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
                 <div className="flex-shrink-0">
                     <img
                         src="/images/Arena_Riqueza_logo.svg"
-                        alt="Arena da Riqueza"
+                        alt="Arena Global"
                         className="h-16 md:h-20 w-auto object-contain"
                     />
                 </div>

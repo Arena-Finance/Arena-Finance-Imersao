@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
 
                     {/* Logo */}
                     <div className="hero-anim w-full lg:w-[90%] xl:w-[85%] flex justify-start mb-6">
-                        <img src="/images/Arena_Riqueza_logo.svg" alt="Arena da Riqueza" className="h-[50px] sm:h-[70px] md:h-[90px] w-auto drop-shadow-md" />
+                        <img src="/images/Arena_Riqueza_logo.svg" alt="Arena Global" className="h-[50px] sm:h-[70px] md:h-[90px] w-auto drop-shadow-md" />
                     </div>
 
                     {/* Tag / Overhead (Red text in reference) */}
